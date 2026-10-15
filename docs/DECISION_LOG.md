@@ -1,11 +1,11 @@
 # Product decisions and evidence boundary
 
-*This log separates my confirmed choices from working hypotheses. All evidence of current Alcovia usage below comes from the supplied assessment brief; no direct app walkthrough, student interviews, production telemetry or Alcovia system access has been claimed.*
+*This log separates the candidate's chosen priorities, brief-provided aggregates, and one 168.9-second supplied mobile-app screen recording reviewed on 15 October 2026. The recording was visually inspected, not operated in an emulator; no student interviews, production telemetry, or privileged Alcovia system access are claimed.*
 
 | Area | Direction | Decision status | Basis / validation |
 |---|---|---|---|
 | Primary product priority | Weekly meaningful learning actions and returning students, rather than optimising screen time alone | **My selection** | Brief reports 2.15 min mean usage and weak repeat adoption of Study features. Determine denominator and learning-action evidence with student-success team. |
-| First product experiment | A simple **Resume My Study Plan** entry point plus a reward tied to verifiable completed practice, not to app opening | **My selection** | Home and Realm appear popular in supplied aggregates. The hypothesis that students cannot easily find their next task still needs direct observation. |
+| First product experiment | A simple **Resume My Study Plan** entry point plus a reward tied to verifiable completed practice, not to app opening | **My selection** | Home and Realm appear popular in supplied aggregates. The supplied recording shows Home task count/planning totals, but no specific next task in the inspected Home view. This is a directional clue, not proof of other students' needs. |
 | Incentive rules | A small, auditable reward after accepted practice; zero for merely opening app, tapping Resume, starting timer or replaying one event | **Implementation proposal** | Check effect on effort quality and pressure on teens. Ten demo coins are fictional, not a production policy. |
 | Existing workflow | Keep ClickUp and n8n initially; build read-only reporting and validate data definitions before changing systems | **Implementation proposal** | Existing tools named in brief; real data contracts, roles, consent and error recovery need inspection. |
 | First cohort | Observe five students and two advisors; pilot a reversible flow with willing participants before broad rollout | **Implementation proposal** | Only 20 active students in supplied 45-day window, so a conventional A/B significance claim is inappropriate. |
@@ -16,8 +16,9 @@
 - Alcovia reports 20 app users over 45 days, 13 Realm users, 11 Focus Timer trials but 5 regular users, and one syllabus user in the most recent week.
 - The brief describes a fragmented advisor documentation process and an existing ClickUp / n8n workflow.
 - These counts do not prove the next-task journey is confusing, that coins motivate learning, or that app minutes improve academic outcomes.
+- In the [separate supplied video review](RECORDED_APP_WALKTHROUGH.md), Realm showed one “Couldn't enter” error and prolonged retry; Home showed four pending tasks without the specific next task in the inspected view; the worksheet had a separate existing score and status buttons; Focus Mode imposed a visible -50-coin Give Up penalty. These are one-session observations, not prevalence or outcome claims.
 
-## First observation plan (not yet conducted)
+## Next observation plan (following one supplied app recording)
 
 1. Ask five consenting students to navigate from Home or Realm to their next agreed study task. Record each step, time to locate the task, whether the task is realistic, and whether they can find appropriate practice.
 2. Review two advisors' real progress-meeting workflows with permission. Record duplicate data entry and where missing evidence forces manual follow-up.
@@ -34,4 +35,4 @@
 
 ## Explicit limitations
 
-The dashboard is populated only with **synthetic records** and simulated browser interactions. The 3-question practice checkpoint does not verify identity or issue real rewards. The associated SQL demonstrates one way to enforce server-side idempotency; it is not installed in Alcovia's systems. This submission does not claim an independent test of the supplied account or first-hand student feedback. These are the first items I would validate after obtaining consent and access.
+The dashboard is populated only with **synthetic records** and simulated browser interactions. The 3-question practice checkpoint does not verify identity or issue real rewards. The associated SQL demonstrates one way to enforce server-side idempotency; it is not installed in Alcovia's systems. The recording supplies **limited, firsthand interface evidence** about one logged-in session, not a device run by the reviewer. It did not include an end-to-end new practice submission, backend verification, student feedback or quantified adoption impact. Those are the next points to validate with consent and access.
