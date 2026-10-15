@@ -1,0 +1,59 @@
+# Alcovia — Product, Systems & Analytics Lead
+**Assessment submission | 15 October 2026**
+
+*Evidence note: This assessment is based on Alcovia’s supplied brief and aggregate usage figures, plus a synthetic prototype. This submission does not claim an independent mobile app walkthrough or interviews with Alcovia students and advisors. The product experiment is a proposal to validate, not an observed user need or a reported improvement.*
+
+## 1. My starting point
+
+I would not treat these as four unrelated engineering projects. The underlying issue appears to be missing feedback loops: a student action is not consistently captured, advisors repeat manual status gathering, campaigns are hard to tie to paid enrolments, and the team lacks an agreed definition of “working well.” I would first establish reliable event ownership and a small number of measures before building more screens.
+
+The brief reports 20 app users over 45 days; only 5 regular Focus Timer users despite 11 trials; a Realm feature used by 13; and a drop-off in study-oriented features. These are **aggregate figures supplied in the brief**, not independently verified observations. The accompanying dashboard uses synthetic data and must not be confused with an analysis of real students. **My selected first priority is meaningful weekly learning actions and returning students, rather than screen time alone.** I want to know whether an enrolled student returns to complete an intentional learning action each week. Thirty minutes a day is a business aspiration in the brief, but it is not yet evidence of greater academic progress. More minutes may indicate friction or entertainment rather than understanding. **One signal in the brief is that Home and Realm attract visits while repeat use of study-planning features is weak. This suggests a possible gap between engagement and study progress; it does not identify the cause.**
+
+## 2. First ten weeks from 1 November
+
+| Period | Product / analytics lead (me) | Full-stack engineer | Process / systems designer | Exit criterion |
+|---|---|---|---|---|
+| Week 1 | Interview five students, two advisors; agree on definitions of retention and meaningful learning action | Audit event logs and current app flows | Map ClickUp sales fields and parent/advisor review workflows | Two validated friction points; metric contract signed off |
+| Weeks 2–3 | Define acquisition and student cohorts, owner assignments, privacy permissions | Instrument focus started/completed, syllabus action, payment sync; create reporting tables | Clean source taxonomy, baseline field completeness, automation runbook | Source-to-dashboard reconciliation; alerts for failed syncs |
+| Weeks 4–6 | Run one student-flow experiment and review impact weekly | Implement smallest reversible UX change; ship read-only dashboards | Pilot weekly progress review with five students and advisors | Reduced manual review time; event coverage within agreed threshold |
+| Weeks 7–10 | Expand only if guardrails and outcome trend are healthy; stop weak experiments | Improve reliability and reviewer usability | Coach advisors, handle exceptions and data hygiene | Accepted KPI trend, verified owner feedback and playbook |
+
+At each stage I would reserve capacity for incident handling and avoid simultaneous redesign of all 25 app features. The existing ClickUp and n8n systems remain the starting point. Production architecture gets decided only after examining APIs, record consistency and permissions.
+
+## 3. What I will measure
+
+**Revenue/GTM:** captured ₹, target attainment, trial vs full vs ₹3,999 workshop split, unpaid invoices, renewal pipeline, lead cohort stage rates, booked-to-showed rate, qualified-to-paid, CPQL, creative frequency, landing-page drop-off and page loading time. A campaign marked “refresh” is a prompt to diagnose, not an automated pause instruction. A newly created lead cohort should not be judged as fully converted after only two days.
+
+**Student outcomes:** separate **delivery quantity** (sessions delivered / scheduled), **student experience** (opt-in ratings with response count), and **performance** (chapter readiness, task completion, exam-related assessments). An academic advisor can support scheduling, accountability, reflections and referrals to subject tutors; they should not certify subject mastery without an appropriate assessment. The chapter rubric in the brief progresses from reading to notes to ≥70% practice to ≥80% timed paper readiness, but the student experience should be reviewed before this becomes a rigid rule.
+
+**My chosen direction:** meaningful weekly learning actions and returning students. **Proposed measurement contract (to validate with Alcovia):** (a) *weekly meaningful coverage*: eligible enrolled learners completing at least one valid, evidence-backed learning action in the reporting week / all eligible enrolled learners; (b) *week-on-week meaningful return*: prior-week meaningful learners still eligible who perform a meaningful action again this week / those prior-week meaningful learners still eligible. Both are measured on pseudonymous IDs and show absolute numerator/denominator, not just percentages. Qualifying actions would be submitted quiz attempts, recorded question practice, completion of a planned study task with evidence, and chapter progress supported by evidence. Mere app opens, coins, Realm use, timer starts, or tapping “done” without evidence would not qualify. Definitions need to be confirmed with advisors and students. A quiz submission is still only participation, not mastery: assessment accuracy and retention are independent outcome measures.
+
+**Risks:** A target of 'one action' could reward token gestures; follow median actions per learner, varied action categories, sample completed tasks and student feedback without ranking vulnerable students. A return rate alone can improve while the denominator shrinks; show coverage of the entire enrolled cohort alongside retention. Weekly time in app remains a diagnostic, not a target; track student burden, advisor time and event completeness as guardrails. **Operational definitions, incentive amounts and the verification process would require approval from Alcovia before implementation.**
+
+## 3A. First product experiment — study plan and practice
+
+**I want a simple `Resume My Study Plan` action, with a reward linked to verified practice.** Students already visit Home and Realm, so I would first make the next academic task easy to find rather than build another standalone feature. When a student taps Resume, they should see the task already agreed in their study plan, with a clear first action. Opening the task, starting the Focus Timer or spending extra minutes should **not** earn coins. Only a completed, recorded practice attempt that the backend can verify should be eligible for a small reward. Accuracy is displayed as feedback and chapter-readiness evidence, not a reason to withhold recognition from a student who genuinely attempted the work. This is the first experiment I would take into discovery, not a claim that existing students requested the feature.
+
+**What I'd test first:** During week one, observe five student journeys from Home or Realm to a planned task and identify where they stop. Confirm whether the missing link is finding the next task, the task being unrealistic, or the practice journey itself. Only then ship the smallest reversible pilot, with the Resume CTA and optional practice reward for consenting students. Measure the proportion of eligible learners who complete evidence-backed practice each week, meaningful week-on-week return, attempted questions and score trends; collect optional feedback on whether it helped or felt pressurising. With about 20 observed users, I would not claim statistically significant lift from an A/B test. Use within-learner observations and qualitative feedback for the pilot, then expand only after validating the event contract and learning value.
+
+**What makes a reward safe:** Real rewards must be granted by a trusted backend only after validating the practice event, with one grant per immutable event ID and a visible audit trail. The HTML prototype only **simulates** this to demonstrate the journey, and the reference SQL provides an example server-side idempotency boundary. The example gives 10 fictitious coins per accepted practice attempt; **the value, repeat caps and anti-gaming rules require Alcovia sign-off**. Reward effort without pressuring children to chase streaks or screen time. Monitor duplicated evidence, repeated trivial attempts, student feedback and academic readiness independently.
+
+**Keep / change / stop:** Keep if students can find their next task faster, voluntarily complete valid practice over multiple weeks, and report the flow as helpful without rising stress or advisor work. Change if students resume but don't complete; examine task difficulty before adding stronger nudges. Stop or disable rewards if the feature encourages superficial attempts, coercive engagement, false evidence or privacy concerns.
+
+## 4. How I prevent “shipped but not working”
+
+A new OKR begins as a one-page problem brief: *who is struggling, evidence, desired outcome, expected change, failure mode, owner*. It must pass: (1) baseline instrumented, (2) feasibility and accessibility checked, (3) smallest scope defined, (4) privacy and roles reviewed, (5) analytics and acceptance tests in place, (6) pilot with qualitative observation, (7) keep / iterate / stop review. The product lead signs off hypotheses and results, the engineer owns reliability/instrumentation, and the systems designer owns the process and training. ClickUp records the decision and owner; n8n handles routine notifications, not unreviewed educational decisions.
+
+Each week: 30-minute metrics/data-quality review, a short delivery blocker check, one advisor feedback session, and a recorded decision review. A failed sync, stale dashboard, or unauthorised student access blocks wider rollout even when the UI looks finished.
+
+## 5. Deliberately not doing in the first release
+
+No new CRM, no wholesale redesign of the app, no new wearable ecosystem, no academic “AI scores” without evidence, and no unsupported promise that a mobile app can block every other app while allowing only whitelisted calls. iOS and Android have distinct system-managed restrictions; both feasibility and safeguarding need validation. Also, student health, mood and performance are sensitive data points, particularly for minors. I would collect the minimum needed, use pseudonymous reporting IDs, apply role-based access and require an agreed consent/retention process.
+
+## 6. Open questions and handoff
+
+Before a real deployment I would request read-only documentation for ClickUp entities, payment/refund mechanics, ad campaign attribution, event analytics, student/advisor permission models, and current mobile platform limitations. I would also ask for five student interviews and two advisor shadow sessions, with suitable permission. Without this input, the dashboards remain an implementation proposal, not evidence of production impact.
+
+**Evidence boundary:** This submission does not include an independently documented walkthrough of the mobile app or validated student feedback about task resumption. I would first observe the Home/Realm → next planned task journey, then change or drop the experiment if that journey is not an actual point of friction.
+
+**My proposed November priority:** meaningful weekly learning actions and return, beginning with **Resume My Study Plan** and a reward for backend-verified practice. The exact reward cap, validation policy and measurement contract would need Alcovia approval. Owner: Product/Analytics Lead. First establish baselines before claiming uplift.

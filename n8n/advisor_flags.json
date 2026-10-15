@@ -1,0 +1,85 @@
+{
+  "name": "Alcovia (TEMPLATE) | Advisor flag detection and queue",
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "days",
+              "triggerAtHour": 9
+            }
+          ]
+        }
+      },
+      "id": "daily-trigger",
+      "name": "Daily 9am",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        240,
+        240
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "INSERT INTO ops.alert_outbox(alert_key,event_type,object_key,title,due_at) SELECT 'advisor:'||flag_id::text,'advisor-review',flag_id::text,'Review student progress flag '||flag_id::text,now() FROM ops.advisor_flags WHERE status='open' ON CONFLICT(alert_key) DO NOTHING RETURNING alert_key,object_key,title;",
+        "options": {}
+      },
+      "id": "pg-upsert",
+      "name": "Idempotently queue alerts",
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.6,
+      "position": [
+        500,
+        240
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "return $input.all().map(item => ({json:{alert_key:item.json.alert_key,queued:true,object_key:item.json.object_key}}));"
+      },
+      "id": "report",
+      "name": "Return queued IDs",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        760,
+        240
+      ]
+    }
+  ],
+  "connections": {
+    "Daily 9am": {
+      "main": [
+        [
+          {
+            "node": "Idempotently queue alerts",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Idempotently queue alerts": {
+      "main": [
+        [
+          {
+            "node": "Return queued IDs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": false
+  }
+}

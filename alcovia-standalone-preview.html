@@ -1,0 +1,336 @@
+<!doctype html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light">
+<title>Alcovia | Product & Revenue Operations — Assessment Prototype</title>
+<style>:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:#172a37;background:#f6f8f6;font-synthesis:none}*{box-sizing:border-box}body{margin:0}button,select{font:inherit}button{cursor:pointer}a{color:#0a8063}.shell{display:flex;min-height:100vh}.sidebar{width:244px;background:#102a2b;color:#e7f4ef;display:flex;flex-direction:column;gap:8px;position:sticky;top:0;height:100vh;padding:24px 17px;flex-shrink:0}.brand{display:flex;align-items:center;gap:11px;margin-bottom:36px;padding-left:6px}.brand-mark{display:flex;align-items:center;justify-content:center;font-weight:800;font-size:25px;background:#d8f4ca;color:#113d35;width:43px;height:43px;border-radius:13px}.brand-mark span{color:#299d73}.brand strong{font-size:23px;letter-spacing:-.9px}.brand small{display:block;font-size:9px;letter-spacing:2px;color:#9cb8af}.nav-header,.eyebrow{font-size:10px;letter-spacing:1.6px;font-weight:800}.nav-header{color:#8daea6;padding:0 14px;margin:0 0 9px}.nav{border:0;text-align:left;padding:13px 15px;border-radius:9px;color:#b9cfc6;background:transparent;font-size:13px;font-weight:650}.nav span{display:inline-block;width:23px;font-size:18px;vertical-align:middle}.nav.active{background:#275146;color:white}.nav:hover{background:#23443e}.sidebar-bottom{margin-top:auto;padding:13px;border-top:1px solid #30514b;font-size:12px;color:#9fbbb2}.sidebar-bottom p{line-height:1.65}.sidebar-bottom a{color:#b8e5cb;text-decoration:none}.demo-pill{font-size:10px;font-weight:750;letter-spacing:1px;color:#8bdcae}.main{width:100%;max-width:1550px;margin:auto;padding:34px 41px 15px;min-width:0}.topbar{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:20px}.eyebrow{color:#61817b}.topbar h1{font-size:32px;letter-spacing:-1.3px;margin:7px 0 5px;font-weight:750}.topbar p,.section-title p{color:#73837e;margin:0;font-size:13px}.top-actions{display:flex;align-items:center;gap:12px;font-size:12px;font-weight:650;color:#637870}select{background:white;border:1px solid #d5e1d9;border-radius:8px;padding:10px 15px;color:#294238;outline-color:#279773}.notice{font-size:12px;background:#ecf6ee;border:1px solid #d8e8dd;color:#4f6c5e;padding:13px 16px;border-radius:10px;margin-bottom:25px}.notice strong{color:#265940}.notice button{border:0;background:transparent;color:#12674e;text-decoration:underline;font-size:12px;font-weight:700}.view{display:none}.view.active{display:block}.section-title{display:flex;align-items:end;justify-content:space-between;gap:12px;margin-bottom:14px}.section-title h2{margin:0 0 6px;font-size:19px;letter-spacing:-.45px}.meta-tag{font-size:11px;color:#648275;background:#e9f0e9;padding:7px 11px;border-radius:7px}.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:17px}.metric,.panel{background:#fff;border:1px solid #e4ebe6;border-radius:13px;box-shadow:0 3px 15px rgba(39,69,46,.025)}.metric{padding:19px 19px 16px;min-height:113px}.metric-label{font-size:11px;font-weight:700;color:#778a81}.metric-value{font-size:28px;letter-spacing:-.8px;font-weight:750;line-height:1.6;font-variant-numeric:tabular-nums}.metric-foot{font-size:11px;color:#88948c}.metric-foot strong{color:#298366}.columns{display:grid;grid-template-columns:1fr 1fr;gap:16px}.columns.wide{grid-template-columns:1.4fr 1fr}.panel{padding:21px;min-width:0}.panel-head{display:flex;justify-content:space-between;gap:9px;align-items:center;margin-bottom:18px}.panel-head h3,.panel h3{font-size:15px;letter-spacing:-.2px;margin:0}.panel-head span{font-size:11px;color:#91a098}.block-gap{margin-top:28px}.bar-group{margin:18px 0}.bar-line{display:flex;justify-content:space-between;align-items:center;gap:6px;font-size:12px;margin-bottom:6px}.bar-line b{font-size:12px}.track{height:10px;background:#edf3ed;border-radius:99px;overflow:hidden}.fill{height:100%;border-radius:99px;background:#2b8669}.fill.alt{background:#84b9a1}.fill.light{background:#b3d4bc}.split-bar{height:18px;background:#edf3ed;border-radius:5px;display:flex;overflow:hidden;margin:19px 0 13px}.split-bar>span{height:100%}.swatch{display:inline-block;width:9px;height:9px;border-radius:3px;margin-right:7px}.legend-row{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid #eff2ee;font-size:12px}.legend-row:last-child{border:0}.legend-row strong{font-size:13px}.small-note{color:#85938a;font-size:11px;line-height:1.6}.stat-line{display:flex;justify-content:space-between;gap:10px;padding:14px 0;border-bottom:1px solid #edf1ed}.stat-line span{font-size:12px;color:#70827a}.stat-line b{font-size:16px}.mini-heading{font-size:10px;letter-spacing:1px;font-weight:800;color:#698476;margin-top:15px}.renewal{display:flex;gap:12px;align-items:center;padding:9px 0;font-size:12px}.renewal .date{color:#268068;background:#eaf4ee;border-radius:6px;padding:6px 8px;font-size:10px}.renewal b{margin-left:auto;font-size:11px}.funnel-row{display:grid;grid-template-columns:137px 1fr 44px;align-items:center;gap:12px;margin:12px 0;font-size:12px}.funnel-row .track{height:16px}.funnel-row .stage{color:#506d5f}.diagnostic{border:1px solid #e4eee6;background:#f8fbf8;border-radius:9px;padding:13px;margin-bottom:10px}.diagnostic small{color:#738d7d;letter-spacing:1px;font-weight:750}.diagnostic strong{display:block;font-size:22px;margin:7px 0}.diagnostic p{font-size:11px;line-height:1.6;color:#738279;margin:0}.inline-label{color:#667e70;font-size:12px;font-weight:700}.inline-label select{margin-left:9px}.scroll-x{overflow-x:auto}table{width:100%;border-collapse:collapse;text-align:left;font-size:12px;white-space:nowrap}th{font-size:10px;text-transform:uppercase;letter-spacing:.6px;color:#83958a;border-bottom:1px solid #e7ede7;padding:12px}td{padding:16px 12px;border-bottom:1px solid #f1f4f0}tr:last-child td{border:0}.table-flag{color:#a36c14;background:#fff4db;padding:6px 8px;border-radius:6px;font-size:11px}.table-ok{color:#247c58;background:#ecf6ed;padding:6px 8px;border-radius:6px;font-size:11px}.lens{display:grid;grid-template-columns:92px 1fr;gap:12px;border-bottom:1px solid #edf2ed;padding:15px 0}.lens:last-child{border:0}.lens b{font-size:11px;color:#47735d}.lens p{margin:0;font-size:12px;line-height:1.6;color:#586e60}.queue-row{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:12px 0;border-bottom:1px solid #eef2ed;font-size:12px}.queue-row:last-child{border:0}.risk{background:#fff2e8;color:#9c6117;border-radius:6px;padding:5px 7px;font-size:11px}.student-name{font-size:23px;font-weight:750}.student-meta{color:#7f8f85;font-size:12px;margin-top:5px}.student-head{display:flex;align-items:start;justify-content:space-between}.student-head span{background:#eaf3ed;padding:7px 11px;border-radius:7px;font-size:11px}.student-bars{display:grid;grid-template-columns:repeat(2,1fr);gap:4px 32px;margin-top:24px}.panel-insight{background:#f2f8f2;margin-top:18px}.panel-insight p{line-height:1.7;color:#5f7765;font-size:12px}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.step{background:white;border:1px solid #e4ebe6;border-radius:13px;padding:19px}.step small{color:#267c5c;font-size:11px;font-weight:800}.step h3{font-size:15px;margin:13px 0 10px}.step p,.step li{font-size:11px;color:#64766b;line-height:1.65}.step ul{padding-left:15px}.hyp-card{display:grid;grid-template-columns:58px 1fr 1fr;gap:20px;padding:19px 20px;background:white;border:1px solid #e7ede6;border-radius:12px;margin-bottom:9px}.hyp-id{color:#2d8061;font-weight:800}.hyp-card h3{margin:0 0 5px;font-size:14px}.hyp-card p{font-size:11px;line-height:1.6;color:#718475;margin:0}.hyp-card .hyp-test{font-size:12px;color:#4f6d5c}.role{border-bottom:1px solid #edf2ed;padding:13px 0}.role:last-child{border:0}.role strong{display:block;font-size:12px}.role span{display:block;color:#75897b;font-size:11px;line-height:1.5;margin-top:5px}.checklist{font-size:12px;color:#5d7966;line-height:2.25;padding-left:21px}.checklist li::marker{color:#298567}footer{margin-top:30px;padding:22px 0;border-top:1px solid #e5ece6;color:#98a69d;font-size:10px;display:flex;justify-content:space-between;gap:10px}dialog{border:1px solid #d5e3d8;border-radius:14px;box-shadow:0 20px 70px #1d3b3150;width:min(600px,92%);padding:25px}dialog::backdrop{background:#18342b80}.dialog-header{display:flex;align-items:center;justify-content:space-between}.dialog-header h2{margin:0}.dialog-header button{border:0;background:transparent;font-size:19px}.modal-body p{font-size:13px;line-height:1.7;color:#506a5a}@media(max-width:1100px){.metrics{grid-template-columns:repeat(2,1fr)}.columns.wide{grid-template-columns:1fr}.steps{grid-template-columns:repeat(2,1fr)}}@media(max-width:760px){.shell{display:block}.sidebar{position:static;width:auto;height:auto;flex-direction:row;flex-wrap:wrap;padding:12px;align-items:center}.brand{margin:0 12px 0 0}.brand small,.nav-header,.sidebar-bottom{display:none}.nav{font-size:11px;padding:10px}.main{padding:20px 14px}.topbar{flex-wrap:wrap}.topbar h1{font-size:28px}.columns,.steps{grid-template-columns:1fr}.student-bars{grid-template-columns:1fr}.hyp-card{grid-template-columns:1fr;gap:8px}.metrics{gap:9px}.metric{padding:14px;min-height:100px}.metric-value{font-size:23px}.section-title{align-items:start;flex-wrap:wrap}footer{display:block}.funnel-row{grid-template-columns:109px 1fr 32px;gap:8px}.panel{padding:15px}}
+
+/* Candidate-priority module */
+.priority-panel{margin-bottom:17px;border-color:#cfe4d7;background:linear-gradient(112deg,#fff 0%,#f4faf4 100%)}
+.priority-head h3{font-size:18px;margin:8px 0}
+.priority-head p{font-size:12px;line-height:1.65;color:#556e60;max-width:800px;margin:0 0 10px}
+.priority-tag{display:inline-block;color:#276a50;font-weight:800;letter-spacing:1.2px;font-size:10px}
+.bridge-bar{padding:4px 10px}.bridge-bar .bar-group{margin:16px 0}
+.bridge-note{padding:16px;border:1px solid #e0ebe2;background:#fff;border-radius:11px;margin:8px 0}
+.bridge-note b{font-size:12px;color:#244a39}.bridge-note p{font-size:12px;line-height:1.65;color:#5b7367}
+
+/* Selected first experiment: next planned study task with evidence-backed reward */
+.pilot-panel{margin-bottom:17px;border-color:#d5e6d9}.pilot-topline{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.pilot-layout{display:grid;grid-template-columns:1.15fr 1fr;gap:22px;align-items:center}.pilot-layout h3{font-size:17px;margin:5px 0 9px}.pilot-lead{font-size:12px;line-height:1.7;color:#577162;max-width:680px}
+.planned-task{border-left:3px solid #318265;background:#f5faf6;padding:12px 16px;margin:15px 0;border-radius:0 9px 9px 0;display:flex;flex-direction:column;gap:5px}.planned-task strong{font-size:14px}.planned-task small{font-size:11px;color:#759185}.planned-pill{font-size:10px;color:#247357;font-weight:800;letter-spacing:1px}.pilot-workflow{background:#f7faf7;border:1px solid #dde9de;border-radius:12px;padding:17px;min-height:123px}.pilot-workflow strong{font-size:14px}.pilot-workflow p{font-size:12px;color:#5d7667;line-height:1.6}.pilot-workflow small{font-size:10px;color:#7e8f83;line-height:1.5}
+.pilot-primary{border:0;background:#237d5b;color:#fff;padding:12px 18px;border-radius:9px;font-size:12px;font-weight:750}.pilot-primary:disabled{background:#8aa99a;cursor:default}.pilot-secondary{border:1px solid #c7ddce;background:#fff;color:#36644c;padding:12px 18px;border-radius:9px;font-size:12px;font-weight:700}.pilot-quiz{margin-top:18px;padding:15px;background:#f8fbf8;border-radius:12px}.pilot-quiz[hidden]{display:none}.pilot-quiz h4{margin:0 0 4px;font-size:15px}.pilot-quiz>p{color:#64806e;font-size:12px}.pilot-quiz fieldset{border:0;border-top:1px solid #dfe9e0;padding:12px 0;margin:10px 0;display:flex;flex-wrap:wrap;gap:12px}.pilot-quiz legend{font-size:13px;font-weight:650;padding-top:12px}.pilot-quiz label{font-size:12px;padding:8px 10px;background:#fff;border:1px solid #e0e8e0;border-radius:7px;cursor:pointer}.pilot-form-actions{display:flex;flex-wrap:wrap;gap:10px}.pilot-panel>.small-note{margin-top:15px}
+@media(max-width:760px){.pilot-layout{grid-template-columns:1fr}.pilot-quiz fieldset{gap:7px}}
+</style></head><body>
+<div class="shell">
+<aside class="sidebar" aria-label="Navigation">
+  <div class="brand"><span class="brand-mark">a<span>.</span></span><div><strong>alcovia</strong><small>OPERATIONS STUDIO</small></div></div>
+  <div class="nav-header">WORKSPACES</div>
+  <button class="nav active" data-tab="gtm"><span>◈</span> GTM & Revenue</button>
+  <button class="nav" data-tab="students"><span>▦</span> Student Outcomes</button>
+  <button class="nav" data-tab="delivery"><span>☷</span> Delivery System</button>
+  <div class="sidebar-bottom"><div class="demo-pill">● DEMO ENVIRONMENT</div><p>All data is synthetic.<br>No student records or real payment integrations.</p><a href="https://github.com" target="_blank" rel="noopener">Repo-ready source ↗</a></div>
+</aside>
+<main class="main">
+<header class="topbar"><div><span class="eyebrow">PRODUCT · SYSTEMS · ANALYTICS</span><h1 id="pageTitle">GTM & Revenue</h1><p id="pageSubtitle">One operating view for acquisition, conversion and collections.</p></div><div class="top-actions"><label for="dateRange">Reporting window</label><select id="dateRange"><option value="7">Last 7 days</option><option selected value="30">Last 30 days</option><option value="90">Last 90 days</option></select></div></header>
+<div class="notice"><strong>Illustrative prototype</strong> — Dummy transactions, lead funnels and student data. The assessment brief supplies aggregate usage observations only. <button id="methodButton">Metric definitions ↗</button></div>
+<section id="gtm" class="view active">
+  <div class="section-title"><div><h2>Revenue pulse</h2><p>Captured payments only. All amounts shown in INR.</p></div><span id="windowTag" class="meta-tag"></span></div>
+  <div class="metrics" id="revenueKpis"></div>
+  <div class="columns two"><article class="panel"><div class="panel-head"><h3>Revenue mix</h3><span>Captured by product</span></div><div id="revenueMix"></div></article><article class="panel"><div class="panel-head"><h3>Cash to chase</h3><span>Invoices and renewal watchlist</span></div><div id="collections"></div></article></div>
+  <div class="section-title block-gap"><div><h2>Lead-to-program funnel</h2><p>Lead cohort created within the selected window, not a mixed-stage snapshot.</p></div><span class="meta-tag">Cohort logic</span></div>
+  <div class="columns wide"><article class="panel"><div class="panel-head"><h3>Stage progression</h3><span id="funnelSub"></span></div><div id="funnel"></div></article><article class="panel"><div class="panel-head"><h3>Conversion diagnostics</h3><span>Question before action</span></div><div id="funnelInsights"></div></article></div>
+  <div class="section-title block-gap"><div><h2>Campaign decision table</h2><p>Demonstrates what to investigate, not automated budget cuts.</p></div><label class="inline-label">Campaign type <select id="campaignType"><option value="all">All</option><option>Programme</option><option>Workshop</option></select></label></div>
+  <article class="panel scroll-x"><table><thead><tr><th>Campaign</th><th>CTR</th><th>Cost / qualified lead</th><th>Frequency</th><th>Landing drop</th><th>ROAS</th><th>Action to investigate</th></tr></thead><tbody id="campaignTable"></tbody></table></article>
+</section>
+<section id="students" class="view">
+ <div class="section-title"><div><h2>Student progress</h2><p>Separate service delivery, student experience and learning progress.</p></div><label class="inline-label">Advisor <select id="advisorSelect"><option value="all">All advisors</option><option>Advisor A</option><option>Advisor B</option></select></label></div>
+ <div class="metrics" id="studentKpis"></div>
+ <article class="panel priority-panel" id="learningBridge" aria-label="Meaningful weekly learning rationale and usage diagnostic"></article>
+
+ <article class="panel pilot-panel" aria-label="Proposed Resume My Study Plan learning experiment">
+  <div class="pilot-topline"><span class="priority-tag">CANDIDATE-SELECTED EXPERIMENT · INTERACTIVE DEMO</span><span class="meta-tag">No real student data</span></div>
+  <div class="pilot-layout">
+    <div><h3>One clear next step</h3><p class="pilot-lead">Make it easy to continue a planned study task, then reward an evidence-backed practice attempt — not opening Realm, starting the timer, or tapping a button.</p>
+      <div class="planned-task"><span class="planned-pill">NEXT PLANNED TASK</span><strong>Revise linear equations</strong><small>Demo lesson · 3 quick practice checks · suggested by existing study plan</small></div>
+      <button class="pilot-primary" id="resumePlan" type="button">Resume My Study Plan →</button>
+    </div>
+    <div class="pilot-workflow" id="pilotWorkflow" aria-live="polite"><strong>Before resuming</strong><p>No coins awarded. Resume only opens the planned task.</p><small>In production, the plan must come from the student's approved timetable, not an invented AI task.</small></div>
+  </div>
+  <form id="pilotPracticeForm" class="pilot-quiz" hidden>
+   <h4>Example practice checkpoint</h4><p>Demo-only arithmetic questions. Attempt all three. Your score is feedback, not a condition for earning the practice reward.</p>
+   <fieldset><legend>1. If 2x + 3 = 11, what is x?</legend><label><input type="radio" name="linear-1" value="2"> 2</label><label><input type="radio" name="linear-1" value="4"> 4</label><label><input type="radio" name="linear-1" value="7"> 7</label></fieldset>
+   <fieldset><legend>2. If 5x − 4 = 11, what is x?</legend><label><input type="radio" name="linear-2" value="2"> 2</label><label><input type="radio" name="linear-2" value="3"> 3</label><label><input type="radio" name="linear-2" value="5"> 5</label></fieldset>
+   <fieldset><legend>3. If 3(x + 2) = 15, what is x?</legend><label><input type="radio" name="linear-3" value="3"> 3</label><label><input type="radio" name="linear-3" value="5"> 5</label><label><input type="radio" name="linear-3" value="7"> 7</label></fieldset>
+   <div class="pilot-form-actions"><button class="pilot-primary" type="submit" id="practiceSubmit">Submit practice evidence</button><button class="pilot-secondary" type="button" id="pilotReset">Reset demo</button></div>
+  </form>
+  <p class="small-note">This is a UI/metric proof of concept. Browser-side acceptance is simulated and cannot constitute secure validation. A real reward requires a backend-verified, unique practice event and an audited grant. The main KPI cards remain unchanged synthetic fixture values when you try the demo.</p>
+ </article>
+
+ <div class="columns two"><article class="panel"><div class="panel-head"><h3>Outcome lenses</h3><span>Quantity / Quality / Performance</span></div><div id="outcomeLenses"></div></article><article class="panel"><div class="panel-head"><h3>Weekly advisor queue</h3><span>Review flags, not student rankings</span></div><div id="advisorQueue"></div></article></div>
+ <div class="section-title block-gap"><div><h2>Student drill-down</h2><p>Prototype shows fictitious first names only; a real system needs role-based access.</p></div><label class="inline-label">Student <select id="studentSelect"></select></label></div>
+ <article class="panel" id="studentDetail"></article>
+ <article class="panel panel-insight"><h3>Student engagement: what we actually know</h3><p>The brief reports <strong>20</strong> users in 45 days, <strong>13</strong> Realm users, <strong>11</strong> Focus Timer trials and <strong>5</strong> regular Focus users. These are provided aggregates, not the synthetic student table above.</p><p><strong>Candidate's selected priority:</strong> meaningful weekly learning actions and returning students. The 30-minute goal is diagnostic until a link to learning progress is validated. Weekly metric contracts in this demo are proposals, not findings from the app. The candidate selected a simple Resume My Study Plan action and a reward tied to verified practice as the first design experiment.</p></article>
+</section>
+<section id="delivery" class="view">
+ <div class="section-title"><div><h2>Build only what can be measured</h2><p>A three-person operating system for November onward.</p></div><span class="meta-tag">Decision log</span></div>
+ <div class="steps" id="deliverySteps"></div>
+ <div class="section-title block-gap"><div><h2>Hypothesis backlog</h2><p>Proposed experiments to accept, reject or replace after speaking to students and advisors.</p></div></div>
+ <div id="hypotheses"></div>
+ <div class="columns two block-gap"><article class="panel"><h3>Team allocation</h3><div class="role"><strong>Product / Analytics Lead (you)</strong><span>Problem framing, stakeholder interviews, metric contracts, acceptance and go/no-go decisions</span></div><div class="role"><strong>Full-stack engineer</strong><span>Event instrumentation, minimum viable data flows, testing, access controls and UI improvements</span></div><div class="role"><strong>Process / Systems designer</strong><span>ClickUp field taxonomy, advisor workflow, operating playbooks, n8n runbooks and data QA</span></div></article><article class="panel"><h3>Definition of done</h3><ul class="checklist"><li>Owner and beneficiary explicitly named</li><li>Baseline and guardrail documented</li><li>Instrumented event or reconciled source exists</li><li>Edge cases, failures and permissions tested</li><li>Adoption reviewed after release</li><li>Keep / iterate / stop decision recorded</li></ul></article></div>
+</section>
+<footer><span>Alcovia assessment · Prepared as an editable prototype, not a production system</span><span>As-of 15 Oct 2026 · Synthetic fixtures</span></footer>
+</main></div>
+<dialog id="methodDialog"><div class="dialog-header"><h2>Metric contracts</h2><button aria-label="Close" id="closeMethod">✕</button></div><div class="modal-body"><p><strong>Paid revenue:</strong> sum of captured payments by payment date, after refunds are handled separately. Invoices are not recognised as paid revenue.</p><p><strong>Conversion rate:</strong> leads created in selected period who later paid, divided by leads created in period. An immature cohort is labelled provisional; for a production system, use a maturity window or fixed 30-day conversion.</p><p><strong>Discovery show rate:</strong> discovery calls attended / discovery calls booked, on the same lead cohort.</p><p><strong>CPQL:</strong> ad spend / qualified leads. Requires UTM attribution and a consistent qualification definition.</p><p><strong>Chapter readiness:</strong> progress through reading, recall notes, question practice (≥70%) and timed past-paper proficiency (≥80%). Demonstration rubric; to be validated with advisors and students.</p><p><strong>Quality:</strong> optional student feedback; no feedback is not a negative score. Show sample counts to avoid false precision.</p><p><strong>Weekly meaningful coverage (candidate-chosen direction):</strong> distinct eligible enrolled students completing at least one qualifying, evidence-backed action this week / all eligible enrolled students, including inactive students. Proposed qualifying events: submitted quiz attempt, completed practice with recorded attempt, evidence-linked planned study task, or recorded chapter readiness evidence; exclude opening Home, coins, Realm play and timer starts alone.</p><p><strong>Week-on-week return:</strong> prior-week meaningful learners still eligible this week who also performed a meaningful action this week / prior-week meaningful learners still eligible this week. Empty prior cohorts show a dash, not 0%.</p><p><strong>Product guardrail:</strong> measure comprehension with separate assessment; keep optional student burden feedback and advisor effort visible. Proposed definitions, subject to candidate and stakeholder validation.</p><p><strong>Practice guardrails:</strong> don't optimise app screen time alone, don't use wearable recovery data for ranking, and do not store student-sensitive records in client-side demo code.</p></div></dialog>
+<script type="module">
+// Synthetic data generator. This is NOT Alcovia production data.
+const AS_OF = '2026-10-15';
+const firstNames=['Aarav','Aditi','Advait','Aisha','Anaya','Arjun','Avni','Dev','Diya','Ishaan','Kabir','Kiara','Meera','Mihir','Naina','Neil','Rhea','Rohan','Sana','Vihaan'];
+let seed=20261015;
+function rand(){seed=(seed*1664525+1013904223)>>>0;return seed/4294967296;}
+function int(a,b){return Math.floor(a+rand()*(b-a+1));}
+function dateAgo(days){const d=new Date('2026-10-15T12:00:00Z');d.setUTCDate(d.getUTCDate()-days);return d.toISOString().slice(0,10);}
+const leads=Array.from({length:460},(_,i)=>{
+  const age=int(0,89),createdOn=dateAgo(age);
+  const campaign=['Meta / Parents / A','Meta / Teen / B','Meta / Workshop / C','Organic','Referral'][int(0,4)];
+  const qualified=rand()<((campaign==='Organic'||campaign==='Referral')?.68:.43);
+  const discoveryBooked=qualified&&rand()<.76;
+  const discoveryShowed=discoveryBooked&&rand()<.71;
+  const ambitionCompleted=discoveryShowed&&rand()<.65;
+  const architectCompleted=ambitionCompleted&&rand()<.73;
+  const paid=architectCompleted&&rand()<.39;
+  const paidDate=new Date(createdOn+'T12:00:00Z'); paidDate.setUTCDate(paidDate.getUTCDate()+int(2,14));
+  const paidOn=paid && paidDate<=new Date(AS_OF+'T23:59:59Z')?paidDate.toISOString().slice(0,10):null;
+  return {id:'L'+String(i+1).padStart(4,'0'),createdOn,campaign,qualified,discoveryBooked,discoveryShowed,ambitionCompleted,architectCompleted,paid:Boolean(paidOn),paidOn,source:campaign==='Organic'?'organic':campaign==='Referral'?'referral':'paid'};
+});
+const campaigns=[
+ {name:'Meta / Parents / A',type:'Programme',impressions:124000,clicks:3560,spend:89200,leads:184,qualified:84,frequency:2.7,attributedRevenue:320000,landingDrop:.51,loadMs:2450},
+ {name:'Meta / Teen / B',type:'Programme',impressions:93000,clicks:1990,spend:73300,leads:112,qualified:34,frequency:3.4,attributedRevenue:104000,landingDrop:.68,loadMs:4100},
+ {name:'Meta / Workshop / C',type:'Workshop',impressions:80000,clicks:3250,spend:35800,leads:101,qualified:51,frequency:2.1,attributedRevenue:156000,landingDrop:.41,loadMs:1900}
+];
+const payments=Array.from({length:120},(_,i)=>{
+  const product=['trial','full','workshop'][int(0,2)];
+  const amount=product==='trial'?34999:product==='full'?129999:3999;
+  const r=rand();
+  return {id:'INV-'+(i+1001),date:dateAgo(int(0,89)),product,amount,status:r<.66?'captured':r<.87?'invoiced':'refunded'};
+});
+const renewals=Array.from({length:10},(_,i)=>({student:'Student '+String(i+1).padStart(2,'0'),due:dateAgo(-int(1,35)),value:129999,owner:['Advisor A','Advisor B'][i%2]}));
+const students=firstNames.map((name,i)=>{
+  const sessions=i<7?0:int(1,12),focusSessions=sessions?int(0,sessions):0;
+  const tasksAssigned=int(12,28),tasksDone=int(3,tasksAssigned),chaptersTarget=int(9,21);
+  const eventsPlanned=int(2,6),eventsDelivered=int(0,eventsPlanned);
+  const ratingCount=eventsDelivered?int(0,eventsDelivered):0;
+  const weeklyActions = ((i>=7 && i<=14) || i>=18) ? int(1,4) : 0;
+  const previousWeekActions = (i>=7 && i<=18) ? int(1,4) : 0;
+  const weeklyAppMinutes = sessions ? int(20,160) : 0;
+  return {id:'ALC'+String(i+1).padStart(3,'0'),name: name+' (demo)',grade:int(8,12),eligible:true,sessions,activeDays:sessions?int(1,5):0,weeklyActions,previousWeekActions,weeklyAppMinutes,focusSessions,focusMinutes:focusSessions*int(12,36),tasksAssigned,tasksDone,overdueTasks:int(0,5),chaptersTarget,chaptersReady:int(0,chaptersTarget),quizOffered:14,quizTaken:int(0,14),eventsPlanned,eventsDelivered,ratingCount,ratingTotal:ratingCount*(3+rand()*2),advisor:i%2?'Advisor A':'Advisor B'};
+});
+const hypotheses=[
+ {id:'H1',problem:'Focus use drops after first trial',evidence:'11 opened Focus; only 5 use regularly (brief)',test:'5 student interviews + 7-day first-focus cohort; instrument focus-start and completion',decision:'Prototype an easier resume flow only if the barrier is supported',owner:'Product lead'},
+ {id:'H2',problem:'Realm is active but study is not',evidence:'13 used Realm; 1 used syllabus this week (brief)',test:'Observe 5 Realm sessions and map next meaningful study action',decision:'Test an optional Realm-to-study prompt against a no-prompt baseline',owner:'Product lead'},
+ {id:'H3',problem:'Advisor updates are manual',evidence:'Progress written across documents and ClickUp (brief)',test:'Shadow 2 advisor reviews; measure time and missing fields',decision:'Automate only the top recurring record-keeping steps',owner:'Systems designer'}
+];
+
+// Pure metric definitions. All events are fictitious demonstration records.
+const inPeriod = (date, start, end) => date >= start && date <= end;
+const safeRate = (part, whole) => whole > 0 ? part / whole : null;
+const sum = (items, key) => items.reduce((t, item) => t + Number(typeof key === 'function' ? key(item) : item[key] || 0), 0);
+const money = n => '₹' + Math.round(n || 0).toLocaleString('en-IN');
+const percent = v => v === null || v === undefined ? '—' : (v * 100).toFixed(1) + '%';
+const median = values => {
+  if(!values.length) return null;
+  const xs = [...values].sort((a,b)=>a-b), i=Math.floor(xs.length/2);
+  return xs.length % 2 ? xs[i] : (xs[i-1]+xs[i])/2;
+};
+function cohortFunnel(leads) {
+  const total = leads.length;
+  const qualified = leads.filter(l=>l.qualified).length;
+  const booked = leads.filter(l=>l.discoveryBooked).length;
+  const showed = leads.filter(l=>l.discoveryShowed).length;
+  const ambition = leads.filter(l=>l.ambitionCompleted).length;
+  const architect = leads.filter(l=>l.architectCompleted).length;
+  const converted = leads.filter(l=>l.paid).length;
+  return {
+    total, qualified, booked, showed, ambition, architect, converted,
+    bookedShowRate:safeRate(showed,booked),
+    qualifiedToPaid:safeRate(converted,qualified),
+    leadToPaid:safeRate(converted,total),
+    timeToPaid:median(leads.filter(l=>l.paid && l.paidOn).map(l=>(new Date(l.paidOn)-new Date(l.createdOn))/86400000))
+  };
+}
+function campaignsSummary(campaigns) {
+  return campaigns.map(c=>({
+    ...c, ctr:safeRate(c.clicks,c.impressions), cpl:safeRate(c.spend,c.leads),
+    cpql:safeRate(c.spend,c.qualified), roas:safeRate(c.attributedRevenue,c.spend),
+    // diagnostic flag, not an automatic spend decision
+    action: c.frequency>=3.0 ? 'Review creative fatigue' : c.qualified===0 && c.spend>2000 ? 'Audit lead quality' : 'Monitor'
+  }));
+}
+function revenueSummary(payments, targets) {
+  const paid = payments.filter(p=>p.status==='captured');
+  const breakdown = {trial:0,full:0,workshop:0};
+  paid.forEach(p=>{if(breakdown[p.product]!==undefined) breakdown[p.product]+=p.amount;});
+  const achieved=Object.values(breakdown).reduce((a,b)=>a+b,0);
+  const unpaid = sum(payments.filter(p=>p.status==='invoiced'), 'amount');
+  const refunds = sum(payments.filter(p=>p.status==='refunded'), 'amount');
+  return {achieved,target:targets,attainment:safeRate(achieved,targets),breakdown,unpaid,refunds};
+}
+function cohortUsage(students) {
+  const active = students.filter(s=>s.sessions>0);
+  const focus = students.filter(s=>s.focusSessions>0);
+  return {
+    enrolled:students.length, active:active.length, activeRate:safeRate(active.length,students.length),
+    focusAdoption:safeRate(focus.length, students.length),
+    averageFocusMinutes:active.length ? sum(active,'focusMinutes')/active.length : null,
+    syllabusReadiness:safeRate(sum(students, 'chaptersReady'),sum(students,'chaptersTarget')),
+    taskCompletion:safeRate(sum(students,'tasksDone'),sum(students,'tasksAssigned')),
+    weeklyQuizParticipation:safeRate(sum(students,'quizTaken'),sum(students,'quizOffered')),
+    deliveryRate:safeRate(sum(students,'eventsDelivered'),sum(students,'eventsPlanned')),
+    learnerRating:safeRate(sum(students,s=>s.ratingTotal),sum(students,'ratingCount')),
+    lateStudents:students.filter(s=>s.overdueTasks>0).length
+  };
+}
+const scoreChapter = c => {
+  // Demonstrative rubric, not a clinical or educational validation.
+  if(c.mockAccuracy>=.80 && c.timedPaper && c.practiceAccuracy>=.70 && c.notes && c.read) return 5;
+  if(c.practiceAccuracy>=.70 && c.notes && c.read) return 3;
+  if(c.notes && c.read) return 2;
+  if(c.read) return 1;
+  return 0;
+};
+
+// Proposed candidate priority. Synthetic weekly aggregates are NOT production proof.
+// Eligible is the full cohort roster (including students with zero engagement); no
+// silent denominator shrinkage to app-openers. A "meaningful action" must satisfy
+// a server-side event contract; the demo uses pre-aggregated illustrative counts.
+function weeklyLearningPulse(learners) {
+  const eligible = learners.filter(s => s.eligible !== false);
+  const engaged = eligible.filter(s => (s.weeklyActions || 0) > 0);
+  const prevEligibleAndEngaged = eligible.filter(s => (s.previousWeekActions || 0) > 0);
+  const returned = prevEligibleAndEngaged.filter(s => (s.weeklyActions || 0) > 0);
+  const activeApp = eligible.filter(s => (s.activeDays || 0) > 0);
+  const activeDays = sum(activeApp, 'activeDays');
+  return {
+    eligible: eligible.length,
+    meaningfulLearners: engaged.length,
+    meaningfulCoverage: safeRate(engaged.length, eligible.length),
+    priorMeaningfulLearners: prevEligibleAndEngaged.length,
+    returningMeaningfulLearners: returned.length,
+    weekToWeekReturn: safeRate(returned.length, prevEligibleAndEngaged.length),
+    totalMeaningfulActions: sum(engaged, 'weeklyActions'),
+    actionsPerMeaningfulLearner: engaged.length ? sum(engaged, 'weeklyActions') / engaged.length : null,
+    // diagnostic only, not a target nor a proxy for learning
+    averageAppMinutesPerActiveDay: safeRate(sum(activeApp, 'weeklyAppMinutes'), activeDays)
+  };
+}
+
+
+// Front-end SIMULATION of the user-selected Resume -> Practice -> Reward pilot.
+// Only a trusted server can validate real attempts and issue actual rewards.
+// The caller owns the in-memory set of already-rewarded event ids.
+const DEMO_PRACTICE_QUESTION_IDS = Object.freeze(['linear-1','linear-2','linear-3']);
+const DEMO_PRACTICE_OPTIONS = Object.freeze({'linear-1':['2','4','7'],'linear-2':['2','3','5'],'linear-3':['3','5','7']});
+const DEMO_PRACTICE_ANSWERS = Object.freeze({'linear-1':'4','linear-2':'3','linear-3':'3'});
+function evaluatePracticeAttempt(attempt, rewardedEventIds = new Set()) {
+  const q = DEMO_PRACTICE_QUESTION_IDS;
+  if (!attempt || attempt.taskId !== 'demo-linear-equations' ||
+      typeof attempt.sourceEventId !== 'string' || !attempt.sourceEventId.startsWith('demo-') ||
+      !attempt.answers || typeof attempt.answers !== 'object' ||
+      q.some(id=>!DEMO_PRACTICE_OPTIONS[id].includes(String(attempt.answers[id]??'')))) {
+    return {accepted:false,reason:'Complete all three practice answers first.',coins:0,correct:null};
+  }
+  if (rewardedEventIds.has(attempt.sourceEventId)) {
+    return {accepted:true,reason:'Already counted: no duplicate reward.',coins:0,correct:q.filter(id=>String(attempt.answers[id])===DEMO_PRACTICE_ANSWERS[id]).length};
+  }
+  // Submission *evidence* is mandatory; accuracy is shown separately so low
+  // scorers are not penalised. No real server attestation exists in this demo.
+  return {accepted:true,reason:'Demo practice submission accepted.',coins:10,correct:q.filter(id=>String(attempt.answers[id])===DEMO_PRACTICE_ANSWERS[id]).length};
+}
+
+const $=id=>document.getElementById(id);
+const end=AS_OF;
+let days=30,tab='gtm',advisor='all';
+const start=()=>{const d=new Date(end+'T12:00:00Z');d.setUTCDate(d.getUTCDate()-(days-1));return d.toISOString().slice(0,10)};
+const filter=(xs,key='date')=>xs.filter(x=>inPeriod(x[key],start(),end));
+function metric(label,value,foot){return `<div class="metric"><div class="metric-label">${label}</div><div class="metric-value">${value}</div><div class="metric-foot">${foot}</div></div>`}
+const bar=(label,value,total,color='',suffix='')=>`<div class="bar-group"><div class="bar-line"><span>${label}</span><b>${suffix||percent(safeRate(value,total))}</b></div><div class="track"><div class="fill ${color}" style="width:${Math.max(0,Math.min(100,100*value/(total||1)))}%"></div></div></div>`;
+function renderGTM(){
+ const ps=filter(payments);const target=days===7?300000:days===30?1200000:3600000;
+ const r=revenueSummary(ps,target);
+ const ls=filter(leads,'createdOn');const f=cohortFunnel(ls);
+ const cps=campaignsSummary(campaigns.map(c=>{const cohortLeads=ls.filter(l=>l.campaign===c.name);const ratio=days/90;return {...c,spend:Math.round(c.spend*ratio),impressions:Math.round(c.impressions*ratio),clicks:Math.round(c.clicks*ratio),leads:cohortLeads.length,qualified:cohortLeads.filter(l=>l.qualified).length,attributedRevenue:Math.round(c.attributedRevenue*ratio)};}));
+ $('windowTag').textContent=`${start()} — ${end}`;
+ $('revenueKpis').innerHTML=metric('Captured revenue',money(r.achieved),'Workshop + trial + full programme')+metric('Target attainment',percent(r.attainment),`Illustrative target ${money(r.target)}`)+metric('Unpaid invoices',money(r.unpaid),'Issued but not captured')+metric('New lead cohort',f.total,'By lead creation date');
+ const mix=[['3-month trial',r.breakdown.trial,'#83bca1'],['Full programme',r.breakdown.full,'#247e60'],['Workshops · ₹3,999/seat',r.breakdown.workshop,'#c6dac7']];
+ $('revenueMix').innerHTML=`<div class="split-bar">${mix.map((m)=>`<span style="width:${r.achieved?m[1]/r.achieved*100:0}%;background:${m[2]}"></span>`).join('')}</div>`+mix.map(m=>`<div class="legend-row"><span><i class="swatch" style="background:${m[2]}"></i>${m[0]}</span><strong>${money(m[1])}</strong></div>`).join('')+`<p class="small-note">Workshop unit price comes from the brief; other prices and all transactions are dummy data.</p>`;
+ $('collections').innerHTML=`<div class="stat-line"><span>Invoice value awaiting payment</span><b>${money(r.unpaid)}</b></div><div class="stat-line"><span>Refunded amount (separate)</span><b>${money(r.refunds)}</b></div><div class="mini-heading">UPCOMING RENEWALS · DEMO</div>`+renewals.slice(0,3).map(x=>`<div class="renewal"><span class="date">${x.due.slice(5)}</span><span>${x.student}</span><b>${x.owner}</b></div>`).join('')+`<p class="small-note">In production, automate the owner reminder; do not count renewals until payment is captured.</p>`;
+ const stages=[['Leads',f.total],['Qualified',f.qualified],['Discovery booked',f.booked],['Discovery attended',f.showed],['Teen ambition interview',f.ambition],['Architect session',f.architect],['Paid enrolment',f.converted]];
+ $('funnelSub').textContent=`${f.total} new leads`;
+ $('funnel').innerHTML=stages.map(([label,value],i)=>`<div class="funnel-row"><span class="stage">${label}</span><div class="track"><div class="fill ${i>4?'light':i>2?'alt':''}" style="width:${100*value/(f.total||1)}%"></div></div><strong>${value}</strong></div>`).join('')+`<p class="small-note">Conversion estimates are provisional for recent leads; compare equal-maturity cohorts in a production dashboard.</p>`;
+ $('funnelInsights').innerHTML=`<div class="diagnostic"><small>DISCOVERY SHOW-UP RATE</small><strong>${percent(f.bookedShowRate)}</strong><p>Attended / booked, among these leads. Check reminders and scheduling friction before changing scripts.</p></div><div class="diagnostic"><small>QUALIFIED → PAID</small><strong>${percent(f.qualifiedToPaid)}</strong><p>Paid conversions / qualified leads. Don't treat students who have not matured through the funnel as lost.</p></div><div class="diagnostic"><small>MEDIAN DAYS TO PAYMENT</small><strong>${f.timeToPaid===null?'—':f.timeToPaid.toFixed(1)+' days'}</strong><p>From lead creation to payment, paid-only selection bias. Use cohort follow-up time in RCA.</p></div>`;
+ const ct=$('campaignType').value;
+ $('campaignTable').innerHTML=cps.filter(c=>ct==='all'||ct===c.type).map(c=>`<tr><td><b>${c.name}</b><br><span class="small-note">${c.type}</span></td><td>${percent(c.ctr)}</td><td>${c.cpql===null?'—':money(c.cpql)}</td><td>${c.frequency.toFixed(1)}</td><td>${percent(c.landingDrop)}</td><td>${c.roas===null?'—':c.roas.toFixed(2)+'x'}</td><td><span class="${c.action==='Monitor'?'table-ok':'table-flag'}">${c.action}</span></td></tr>`).join('');
+}
+function renderStudents(){
+ let cohort=students.filter(s=>advisor==='all'||advisor===s.advisor);const u=cohortUsage(cohort);const w=weeklyLearningPulse(cohort);
+ $('studentKpis').innerHTML=metric('Meaningful weekly coverage',percent(w.meaningfulCoverage),`${w.meaningfulLearners} of ${w.eligible} eligible students · demo`)+metric('Week-on-week return',percent(w.weekToWeekReturn),`${w.returningMeaningfulLearners} of ${w.priorMeaningfulLearners} prior-week meaningful learners`)+metric('Meaningful actions',w.totalMeaningfulActions,`${w.actionsPerMeaningfulLearner===null?'—':w.actionsPerMeaningfulLearner.toFixed(1)} per participating learner`)+metric('Task completion',percent(u.taskCompletion),'Done / assigned · separate outcome lens');
+ $('learningBridge').innerHTML=`<div class="priority-head"><span class="priority-tag">CANDIDATE-CHOSEN DIRECTION</span><h3>Return for progress, not simply for screen time</h3><p>The goal is more eligible students completing a purposeful learning action this week and returning to do so the next week. Completion still needs independent checks for understanding.</p></div><div class="columns two"><div class="bridge-bar">${bar('Eligible roster',w.eligible,w.eligible,'',`${w.eligible} students`)}${bar('Opened the app',u.active,w.eligible,'light',`${u.active} / ${w.eligible}`)}${bar('Meaningful learning action',w.meaningfulLearners,w.eligible,'',`${w.meaningfulLearners} / ${w.eligible}`)}</div><div class="bridge-note"><b>Screen time is a diagnostic, not the north star</b><p>Illustrative app minutes per active day: <strong>${w.averageAppMinutesPerActiveDay===null?'—':w.averageAppMinutesPerActiveDay.toFixed(1)+' min'}</strong>. Alcovia's 30-minute aspiration should be tested against learning value, not treated as an unconditional KPI.</p><p>Guardrails: verified understanding, student-reported burden, advisor effort, and event-data completeness.</p></div></div><p class="small-note">Demo week: 9–15 Oct 2026 vs prior 2–8 Oct. Student numbers and weekly events are entirely synthetic. Brief-provided 20-user/Realm/Focus aggregates appear separately below.</p>`;
+ $('outcomeLenses').innerHTML=`<div class="lens"><b>QUANTITY</b><p>Events delivered: <strong>${sum(cohort,'eventsDelivered')}</strong> / ${sum(cohort,'eventsPlanned')} scheduled (${percent(u.deliveryRate)}). Owner confirms occurrence.</p></div><div class="lens"><b>QUALITY</b><p>Average optional post-session feedback: <strong>${u.learnerRating===null?'—':u.learnerRating.toFixed(1)}/5</strong>, from ${sum(cohort,'ratingCount')} responses. Display non-response separately.</p></div><div class="lens"><b>PERFORMANCE</b><p>Chapters ready: <strong>${sum(cohort,'chaptersReady')}</strong> / ${sum(cohort,'chaptersTarget')} planned; <strong>${u.lateStudents}</strong> students have overdue tasks.</p></div><div class="lens"><b>ENGAGEMENT</b><p>Focus tool adoption: <strong>${percent(u.focusAdoption)}</strong>. Weekly learning coverage: <strong>${percent(w.meaningfulCoverage)}</strong>. Neither by itself proves learning outcomes.</p></div>`;
+ const flagged=cohort.filter(s=>s.overdueTasks>=3).sort((a,b)=>b.overdueTasks-a.overdueTasks);
+ $('advisorQueue').innerHTML=(flagged.slice(0,6).map(s=>`<div class="queue-row"><span><strong>${s.name}</strong><br><span class="small-note">${s.advisor} · Grade ${s.grade}</span></span><span class="risk">${s.overdueTasks} overdue</span></div>`).join('')||'<p class="small-note">No students meet this demo flag.</p>')+`<p class="small-note">A flag initiates a supportive review, never an automated penalty.</p>`;
+ const select=$('studentSelect'),old=select.value;
+ select.innerHTML=cohort.map(s=>`<option value="${s.id}">${s.name}</option>`).join('');
+ select.value=cohort.some(s=>s.id===old)?old:cohort[0]?.id;
+ renderStudentDetail(cohort.find(s=>s.id===select.value));
+}
+function renderStudentDetail(s){
+ if(!s){$('studentDetail').innerHTML='<p>No students.</p>';return;}
+ $('studentDetail').innerHTML=`<div class="student-head"><div><div class="student-name">${s.name}</div><div class="student-meta">Grade ${s.grade} · ${s.advisor} · ID ${s.id}</div></div><span>Demo only</span></div><div class="student-bars">${bar('Tasks completed',s.tasksDone,s.tasksAssigned,'',`${s.tasksDone} / ${s.tasksAssigned}`)}${bar('Ready chapters',s.chaptersReady,s.chaptersTarget,'alt',`${s.chaptersReady} / ${s.chaptersTarget}`)}${bar('Quiz participation',s.quizTaken,s.quizOffered,'light',`${s.quizTaken} / ${s.quizOffered}`)}${bar('Delivered sessions',s.eventsDelivered,s.eventsPlanned,'',`${s.eventsDelivered} / ${s.eventsPlanned}`)}</div><p class="small-note">Meaningful actions this week: ${s.weeklyActions}; previous week: ${s.previousWeekActions}. Focus minutes: ${s.focusMinutes}. These are fabricated demonstration events; academic understanding needs independent assessments.</p>`;
+}
+function renderDelivery(){
+ const phases=[['01','Frame','Week 1','Interview 5 students and 2 advisors; document workflow bottlenecks; baseline events','Product lead'],['02','Instrument','Weeks 2–3','Define source-of-truth tables and events; audit ClickUp/Razorpay mapping; ship read-only telemetry','Engineer + designer'],['03','Pilot','Weeks 4–6','Pilot advisor dashboard with 5 students and a focused study-flow improvement','All three'],['04','Decide & scale','Weeks 7–10','Review retention, time saved and data completeness; kill weak ideas; roll out only proven changes','Product lead']];
+ $('deliverySteps').innerHTML=phases.map(x=>`<article class="step"><small>${x[0]} / ${x[2]}</small><h3>${x[1]}</h3><p>${x[3]}</p><p><b>Accountable:</b> ${x[4]}</p></article>`).join('');
+ $('hypotheses').innerHTML=hypotheses.map(h=>`<article class="hyp-card"><div class="hyp-id">${h.id}</div><div><h3>${h.problem}</h3><p>Brief evidence: ${h.evidence}</p></div><div><p class="hyp-test"><b>First test:</b> ${h.test}</p><p><b>Conditional decision:</b> ${h.decision}</p></div></article>`).join('');
+}
+function navigate(next){tab=next;document.querySelectorAll('.nav').forEach(n=>n.classList.toggle('active',n.dataset.tab===next));document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.id===next));document.querySelector('.top-actions').style.display=next==='gtm'?'flex':'none';const titles={gtm:['GTM & Revenue','One operating view for acquisition, conversion and collections.'],students:['Student Outcomes','Meaningful learning progress, not just screen time.'],delivery:['Delivery System','A repeatable way to prioritise, ship and learn with a team of three.']};$('pageTitle').textContent=titles[next][0];$('pageSubtitle').textContent=titles[next][1];}
+document.querySelectorAll('.nav').forEach(n=>n.addEventListener('click',()=>navigate(n.dataset.tab)));
+// Candidate-selected UX path: a visible next action + a reward only after
+// simulated practice evidence submission. This state exists only in this tab.
+let pilotOpened=false, pilotRewarded=false;
+const demoAwardedEventIds = new Set();
+const pilotEventId='demo-linear-equations-first-attempt';
+$('resumePlan').addEventListener('click',()=>{
+ pilotOpened=true;
+ $('pilotPracticeForm').hidden=false;
+ $('pilotWorkflow').innerHTML='<strong>Study plan resumed</strong><p>Next: complete the three practice questions below. <b>0 coins earned so far.</b></p><small>Opening or focusing a task does not qualify as learning evidence.</small>';
+ $('resumePlan').textContent='Practice checkpoint open';
+ $('resumePlan').disabled=true;
+});
+$('pilotPracticeForm').addEventListener('submit',event=>{
+ event.preventDefault();
+ if(!pilotOpened)return;
+ const form=new FormData(event.currentTarget);
+ const answers=Object.fromEntries(DEMO_PRACTICE_QUESTION_IDS.map(id=>[id,form.get(id)]));
+ const result=evaluatePracticeAttempt({taskId:'demo-linear-equations',sourceEventId:pilotEventId,answers},demoAwardedEventIds);
+ if(!result.accepted){
+   $('pilotWorkflow').innerHTML='<strong>Submission incomplete</strong><p>Answer all three practice questions first. No reward has been issued.</p>';
+   return;
+ }
+ if(result.coins>0){demoAwardedEventIds.add(pilotEventId);pilotRewarded=true;}
+ $('pilotWorkflow').innerHTML=`<strong>${result.coins>0?'Practice recorded (demo)':'Attempt already recorded'}</strong><p>${result.correct}/3 correct · <b>${result.coins>0?'+10 demo coins':'No additional coins'}</b>.</p><small>Practice attempt accepted in this local simulation. This does not establish chapter mastery, and no real coins or analytics events were sent.</small>`;
+ $('practiceSubmit').disabled=true;
+ $('practiceSubmit').textContent='Practice submitted';
+});
+$('pilotReset').addEventListener('click',()=>{
+ // UI reset intentionally does not reset the in-session grant ledger.
+ $('pilotPracticeForm').reset();
+ $('practiceSubmit').disabled=false;
+ $('practiceSubmit').textContent='Submit practice evidence';
+ $('pilotWorkflow').innerHTML='<strong>Practice answers cleared</strong><p>Your example answers have been reset. Any accepted attempt stays recorded for this session; duplicate evidence never issues another reward.</p>';
+});
+
+$('dateRange').addEventListener('change',e=>{days=Number(e.target.value);renderGTM()});
+$('campaignType').addEventListener('change',renderGTM);
+$('advisorSelect').addEventListener('change',e=>{advisor=e.target.value;renderStudents()});
+$('studentSelect').addEventListener('change',e=>renderStudentDetail(students.find(s=>s.id===e.target.value)));
+$('methodButton').addEventListener('click',()=>$('methodDialog').showModal());
+$('closeMethod').addEventListener('click',()=>$('methodDialog').close());
+renderGTM();renderStudents();renderDelivery();navigate('students');
+</script></body></html>

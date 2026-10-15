@@ -1,0 +1,65 @@
+<!doctype html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light">
+<title>Alcovia | Product & Revenue Operations — Assessment Prototype</title>
+<link rel="stylesheet" href="./styles.css"></head><body>
+<div class="shell">
+<aside class="sidebar" aria-label="Navigation">
+  <div class="brand"><span class="brand-mark">a<span>.</span></span><div><strong>alcovia</strong><small>OPERATIONS STUDIO</small></div></div>
+  <div class="nav-header">WORKSPACES</div>
+  <button class="nav active" data-tab="gtm"><span>◈</span> GTM & Revenue</button>
+  <button class="nav" data-tab="students"><span>▦</span> Student Outcomes</button>
+  <button class="nav" data-tab="delivery"><span>☷</span> Delivery System</button>
+  <div class="sidebar-bottom"><div class="demo-pill">● DEMO ENVIRONMENT</div><p>All data is synthetic.<br>No student records or real payment integrations.</p><a href="https://github.com" target="_blank" rel="noopener">Repo-ready source ↗</a></div>
+</aside>
+<main class="main">
+<header class="topbar"><div><span class="eyebrow">PRODUCT · SYSTEMS · ANALYTICS</span><h1 id="pageTitle">GTM & Revenue</h1><p id="pageSubtitle">One operating view for acquisition, conversion and collections.</p></div><div class="top-actions"><label for="dateRange">Reporting window</label><select id="dateRange"><option value="7">Last 7 days</option><option selected value="30">Last 30 days</option><option value="90">Last 90 days</option></select></div></header>
+<div class="notice"><strong>Illustrative prototype</strong> — Dummy transactions, lead funnels and student data. The assessment brief supplies aggregate usage observations only. <button id="methodButton">Metric definitions ↗</button></div>
+<section id="gtm" class="view active">
+  <div class="section-title"><div><h2>Revenue pulse</h2><p>Captured payments only. All amounts shown in INR.</p></div><span id="windowTag" class="meta-tag"></span></div>
+  <div class="metrics" id="revenueKpis"></div>
+  <div class="columns two"><article class="panel"><div class="panel-head"><h3>Revenue mix</h3><span>Captured by product</span></div><div id="revenueMix"></div></article><article class="panel"><div class="panel-head"><h3>Cash to chase</h3><span>Invoices and renewal watchlist</span></div><div id="collections"></div></article></div>
+  <div class="section-title block-gap"><div><h2>Lead-to-program funnel</h2><p>Lead cohort created within the selected window, not a mixed-stage snapshot.</p></div><span class="meta-tag">Cohort logic</span></div>
+  <div class="columns wide"><article class="panel"><div class="panel-head"><h3>Stage progression</h3><span id="funnelSub"></span></div><div id="funnel"></div></article><article class="panel"><div class="panel-head"><h3>Conversion diagnostics</h3><span>Question before action</span></div><div id="funnelInsights"></div></article></div>
+  <div class="section-title block-gap"><div><h2>Campaign decision table</h2><p>Demonstrates what to investigate, not automated budget cuts.</p></div><label class="inline-label">Campaign type <select id="campaignType"><option value="all">All</option><option>Programme</option><option>Workshop</option></select></label></div>
+  <article class="panel scroll-x"><table><thead><tr><th>Campaign</th><th>CTR</th><th>Cost / qualified lead</th><th>Frequency</th><th>Landing drop</th><th>ROAS</th><th>Action to investigate</th></tr></thead><tbody id="campaignTable"></tbody></table></article>
+</section>
+<section id="students" class="view">
+ <div class="section-title"><div><h2>Student progress</h2><p>Separate service delivery, student experience and learning progress.</p></div><label class="inline-label">Advisor <select id="advisorSelect"><option value="all">All advisors</option><option>Advisor A</option><option>Advisor B</option></select></label></div>
+ <div class="metrics" id="studentKpis"></div>
+ <article class="panel priority-panel" id="learningBridge" aria-label="Meaningful weekly learning rationale and usage diagnostic"></article>
+
+ <article class="panel pilot-panel" aria-label="Proposed Resume My Study Plan learning experiment">
+  <div class="pilot-topline"><span class="priority-tag">CANDIDATE-SELECTED EXPERIMENT · INTERACTIVE DEMO</span><span class="meta-tag">No real student data</span></div>
+  <div class="pilot-layout">
+    <div><h3>One clear next step</h3><p class="pilot-lead">Make it easy to continue a planned study task, then reward an evidence-backed practice attempt — not opening Realm, starting the timer, or tapping a button.</p>
+      <div class="planned-task"><span class="planned-pill">NEXT PLANNED TASK</span><strong>Revise linear equations</strong><small>Demo lesson · 3 quick practice checks · suggested by existing study plan</small></div>
+      <button class="pilot-primary" id="resumePlan" type="button">Resume My Study Plan →</button>
+    </div>
+    <div class="pilot-workflow" id="pilotWorkflow" aria-live="polite"><strong>Before resuming</strong><p>No coins awarded. Resume only opens the planned task.</p><small>In production, the plan must come from the student's approved timetable, not an invented AI task.</small></div>
+  </div>
+  <form id="pilotPracticeForm" class="pilot-quiz" hidden>
+   <h4>Example practice checkpoint</h4><p>Demo-only arithmetic questions. Attempt all three. Your score is feedback, not a condition for earning the practice reward.</p>
+   <fieldset><legend>1. If 2x + 3 = 11, what is x?</legend><label><input type="radio" name="linear-1" value="2"> 2</label><label><input type="radio" name="linear-1" value="4"> 4</label><label><input type="radio" name="linear-1" value="7"> 7</label></fieldset>
+   <fieldset><legend>2. If 5x − 4 = 11, what is x?</legend><label><input type="radio" name="linear-2" value="2"> 2</label><label><input type="radio" name="linear-2" value="3"> 3</label><label><input type="radio" name="linear-2" value="5"> 5</label></fieldset>
+   <fieldset><legend>3. If 3(x + 2) = 15, what is x?</legend><label><input type="radio" name="linear-3" value="3"> 3</label><label><input type="radio" name="linear-3" value="5"> 5</label><label><input type="radio" name="linear-3" value="7"> 7</label></fieldset>
+   <div class="pilot-form-actions"><button class="pilot-primary" type="submit" id="practiceSubmit">Submit practice evidence</button><button class="pilot-secondary" type="button" id="pilotReset">Reset demo</button></div>
+  </form>
+  <p class="small-note">This is a UI/metric proof of concept. Browser-side acceptance is simulated and cannot constitute secure validation. A real reward requires a backend-verified, unique practice event and an audited grant. The main KPI cards remain unchanged synthetic fixture values when you try the demo.</p>
+ </article>
+
+ <div class="columns two"><article class="panel"><div class="panel-head"><h3>Outcome lenses</h3><span>Quantity / Quality / Performance</span></div><div id="outcomeLenses"></div></article><article class="panel"><div class="panel-head"><h3>Weekly advisor queue</h3><span>Review flags, not student rankings</span></div><div id="advisorQueue"></div></article></div>
+ <div class="section-title block-gap"><div><h2>Student drill-down</h2><p>Prototype shows fictitious first names only; a real system needs role-based access.</p></div><label class="inline-label">Student <select id="studentSelect"></select></label></div>
+ <article class="panel" id="studentDetail"></article>
+ <article class="panel panel-insight"><h3>Student engagement: what we actually know</h3><p>The brief reports <strong>20</strong> users in 45 days, <strong>13</strong> Realm users, <strong>11</strong> Focus Timer trials and <strong>5</strong> regular Focus users. These are provided aggregates, not the synthetic student table above.</p><p><strong>Candidate's selected priority:</strong> meaningful weekly learning actions and returning students. The 30-minute goal is diagnostic until a link to learning progress is validated. Weekly metric contracts in this demo are proposals, not findings from the app. The candidate selected a simple Resume My Study Plan action and a reward tied to verified practice as the first design experiment.</p></article>
+</section>
+<section id="delivery" class="view">
+ <div class="section-title"><div><h2>Build only what can be measured</h2><p>A three-person operating system for November onward.</p></div><span class="meta-tag">Decision log</span></div>
+ <div class="steps" id="deliverySteps"></div>
+ <div class="section-title block-gap"><div><h2>Hypothesis backlog</h2><p>Proposed experiments to accept, reject or replace after speaking to students and advisors.</p></div></div>
+ <div id="hypotheses"></div>
+ <div class="columns two block-gap"><article class="panel"><h3>Team allocation</h3><div class="role"><strong>Product / Analytics Lead (you)</strong><span>Problem framing, stakeholder interviews, metric contracts, acceptance and go/no-go decisions</span></div><div class="role"><strong>Full-stack engineer</strong><span>Event instrumentation, minimum viable data flows, testing, access controls and UI improvements</span></div><div class="role"><strong>Process / Systems designer</strong><span>ClickUp field taxonomy, advisor workflow, operating playbooks, n8n runbooks and data QA</span></div></article><article class="panel"><h3>Definition of done</h3><ul class="checklist"><li>Owner and beneficiary explicitly named</li><li>Baseline and guardrail documented</li><li>Instrumented event or reconciled source exists</li><li>Edge cases, failures and permissions tested</li><li>Adoption reviewed after release</li><li>Keep / iterate / stop decision recorded</li></ul></article></div>
+</section>
+<footer><span>Alcovia assessment · Prepared as an editable prototype, not a production system</span><span>As-of 15 Oct 2026 · Synthetic fixtures</span></footer>
+</main></div>
+<dialog id="methodDialog"><div class="dialog-header"><h2>Metric contracts</h2><button aria-label="Close" id="closeMethod">✕</button></div><div class="modal-body"><p><strong>Paid revenue:</strong> sum of captured payments by payment date, after refunds are handled separately. Invoices are not recognised as paid revenue.</p><p><strong>Conversion rate:</strong> leads created in selected period who later paid, divided by leads created in period. An immature cohort is labelled provisional; for a production system, use a maturity window or fixed 30-day conversion.</p><p><strong>Discovery show rate:</strong> discovery calls attended / discovery calls booked, on the same lead cohort.</p><p><strong>CPQL:</strong> ad spend / qualified leads. Requires UTM attribution and a consistent qualification definition.</p><p><strong>Chapter readiness:</strong> progress through reading, recall notes, question practice (≥70%) and timed past-paper proficiency (≥80%). Demonstration rubric; to be validated with advisors and students.</p><p><strong>Quality:</strong> optional student feedback; no feedback is not a negative score. Show sample counts to avoid false precision.</p><p><strong>Weekly meaningful coverage (candidate-chosen direction):</strong> distinct eligible enrolled students completing at least one qualifying, evidence-backed action this week / all eligible enrolled students, including inactive students. Proposed qualifying events: submitted quiz attempt, completed practice with recorded attempt, evidence-linked planned study task, or recorded chapter readiness evidence; exclude opening Home, coins, Realm play and timer starts alone.</p><p><strong>Week-on-week return:</strong> prior-week meaningful learners still eligible this week who also performed a meaningful action this week / prior-week meaningful learners still eligible this week. Empty prior cohorts show a dash, not 0%.</p><p><strong>Product guardrail:</strong> measure comprehension with separate assessment; keep optional student burden feedback and advisor effort visible. Proposed definitions, subject to candidate and stakeholder validation.</p><p><strong>Practice guardrails:</strong> don't optimise app screen time alone, don't use wearable recovery data for ranking, and do not store student-sensitive records in client-side demo code.</p></div></dialog>
+<script type="module" src="./main.js"></script></body></html>
