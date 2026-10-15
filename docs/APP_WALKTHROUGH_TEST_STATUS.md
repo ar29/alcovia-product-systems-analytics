@@ -1,41 +1,51 @@
-# Mobile app walkthrough — evidence status (15 October 2026)
+# Alcovia student app — APK inspection and UX evidence status
 
-## Scope and result
+**Date:** 15 October 2026  
+**Source:** Android APK attached by the candidate, originally linked in Alcovia's assessment invitation  
+**Method:** Offline, static inspection of the APK's ZIP contents, Expo configuration, Android binary manifest and bundled Hermes strings. **No application execution or login was performed.**
 
-**The Alcovia Android application has NOT been executed or tested.** The Google Drive link was inspected and resolved to an APK named `application-60b82459-5ebf-446d-80be-95fe62551dbc.apk`, but attempts to download the binary to the test environment failed due to network restrictions. That environment has no Android SDK, emulator, or connected device. The TestFlight link resolves to an Alcovia beta invitation; no iOS device test was performed.
+## Confirmed package details
 
-**Do not describe any of the following questions as observed in-app findings.** The assessment brief's feature summary is not equivalent to a firsthand walkthrough.
+| Property | Observed value |
+| --- | --- |
+| Android package | `com.alcovia.mobile` |
+| App name | Alcovia |
+| App version | 1.0.0 |
+| Android versionCode | 30 |
+| Expo SDK (bundled config) | 54.0.0 |
+| Application framework | React Native / Expo, Hermes JavaScript engine |
+| File size | approximately 121.3 MiB |
+| SHA-256 | `efc25ace0696fa64ebd4a59f30b98892d4f804312f7e91746f4abf8f434d625d` |
 
-## Six unanswered mobile UX questions
+The APK includes 3D model assets (`.glb`) and React Native/Expo libraries. Static text references in bundled code include `FocusTimerScreen`, `StudyPlannerScreen`, `useStudentTodos`, `useTaskCompletion`, `useSyllabusHistory`, `useFocusScoreHistory`, `useMyMonthlyProgress`, `useRoadmapCompletion`, `useStudentAdherenceBreakdown`, and `useFocusDnd`. These show code references, **not proof that the features are visible, connected, usable, or correctly implemented at runtime.**
 
-| Question | Direct observation | What the brief actually supports | To verify |
-| --- | --- | --- | --- |
-| Is the next planned study task immediately identifiable on Home? | Not tested | Home has dashboard cards and Tasks is a tab, but visibility of a specific next action is undocumented | Start at Home, record screenshot and count taps to next assigned study task |
-| Does Realm link directly back to study? | Not tested | Realm involves a 3D territory/dragon game and Focus can hatch eggs; no direct deep-link back to planned practice is confirmed | Enter Realm, finish one activity, record available next actions and path to planned task |
-| How many steps to start and complete practice? | Not tested | Syllabus supports chapters, worksheets, revisions and scores; tap count is unknown | Time and count taps from Home to actual practice submission |
-| Does Focus Timer record outcomes beyond minutes? | Not tested | Timer starts focus sessions, contributes to game rewards and focus indicators; verified study outcomes aren't documented | Complete timer session; inspect result, task linkage and persisted evidence |
-| Is verified practice different from tapping Done? | Not tested | Brief defines academic readiness thresholds, but doesn't establish a production practice-evidence validation rule | Submit incomplete/incorrect/complete answers, try marking task done and compare app responses |
-| Can a student independently see academic progress? | Not tested | Syllabus, grades, goals, exams and Home cards exist in feature map; clarity and completeness unknown | Locate chapter readiness, subject trajectory and advisor-linked targets without assistance |
+The Android manifest declares, among other permissions, `PACKAGE_USAGE_STATS`, `QUERY_ALL_PACKAGES`, `SYSTEM_ALERT_WINDOW`, `ACCESS_NOTIFICATION_POLICY`, calendar, activity-recognition, and notification permissions. These may be relevant to Alcovia's proposed Focus Mode and phone restrictions. **They do not establish that other apps are actually blocked, that permission requests are granted, or that equivalent controls exist on iOS.** Certain entries may be inherited from libraries.
 
-## Independently browser-tested: candidate dashboard, not Alcovia mobile app
+## Six requested app-journey checks
 
-Public prototype: https://alcovia-product-systems-analytics-a.vercel.app/
+| UX question | What static inspection establishes | What still needs an actual device run |
+| --- | --- | --- |
+| Can the student immediately identify their next planned task from Home? | The app bundle references todo/planner modules. | Home screen content and number of taps to the next advisor-approved task. |
+| Does Realm link clearly back to a study activity? | The APK contains 3D assets and focus/game code. | Whether the Realm experience offers a clear next-step deep link back to learning. |
+| How many steps to begin and complete practice? | Study, syllabus, task, and revision related code references are present. | Actual tap count, elapsed time, errors, and completion evidence along an entire journey. |
+| Does Focus Timer record more than elapsed time? | Code includes a focus-score-history reference and a Focus Timer screen name. | Saved session result, task linkage, question/learning outcome and end-of-session UX. |
+| Is verified practice different from marking a task complete? | Code references task completion. | Whether the app/backend validates evidence independently of the user's tap, and how it handles duplicate attempts. |
+| Can a student understand academic progress without an advisor? | Code references syllabus history, monthly progress, roadmap completion and adherence. | Discoverability, clarity of score/readiness metrics, and ability to interpret progress without guidance. |
 
-- Production deployment confirmed READY on Vercel at commit `cc22b058`.
-- GTM & Revenue, Student Outcomes and Delivery System navigation worked.
-- Revenue windows of 7, 30 and 90 days recalculated KPIs.
-- Advisor A filtering recalculated student participation metrics and narrowed the drill-down list.
-- Student drill-down displayed task, chapter, quiz and session KPIs.
-- The **simulated** Resume My Study Plan action opened a practice checkpoint and awarded *no* coins for resuming alone.
-- An incomplete practice attempt was rejected; submitting all three answers issued **one** demo reward of 10 coins.
-- All 14 local metric unit tests passed.
+**Finding:** These six questions remain **not verified** as user journeys. It would be misleading to claim the APK static inspection answered them. The **Resume My Study Plan** and **verified-practice reward** remain candidate-selected **hypotheses** pending real student/app observations.
 
-Every KPI shown in the public prototype uses **synthetic** data. Browser-side practice 'verification' is illustrative and is not secure evidence of student learning.
+## iOS TestFlight
 
-## Candidate-selected product hypothesis, not app finding
+The public invitation is https://testflight.apple.com/join/1CyZ3fdT . It resolves to the Alcovia beta invitation, but iOS TestFlight requires a compatible Apple device (or supported Apple testing environment). The Android APK cannot be used to test the iOS build, and no iOS runtime test has been carried out.
 
-Test a prominent **Resume My Study Plan** action linking an existing advisor-approved task to a verifiable practice attempt, with non-coercive recognition only for a completed evidenced attempt. Primary outcomes proposed for validation: weekly meaningful learning coverage and eligible prior-week learners returning for another meaningful action. Guardrails: academic accuracy/readiness, time burden, student feedback, advisor workload, event integrity and duplicated rewards.
+## Separately verified candidate dashboard
 
-## Required next evidence
+Public URL: https://alcovia-product-systems-analytics-a.vercel.app/
 
-Run the six steps using the provided Alcovia test account on an approved Android or iOS device. Record the date, app build/version, start screen, exact tap sequence, observed message and screenshots (with minor/student information redacted). Replace this evidence-status note only with actual observations. Never commit test-account credentials, screenshots of real student profiles, or exported student records to public GitHub.
+The production deployment is live. A separate browser-based check passed workspace switching, 7/30/90-day revenue filtering, advisor filtering, student drill-down and the simulated Resume → practice checkpoint → single demo reward flow. The figures are **synthetic**, and the browser-side practice validation is **not** a trusted production backend. These results are **not** evidence about the current Alcovia mobile app.
+
+## Recommended next evidence before making mobile UX claims
+
+On a test Android phone or emulator, sign in using the credentials provided privately by Alcovia. Record the app version, date, initial Home screen, screen recording of the six journeys, tap count to begin and finish a study task, a completed focus session, and how task completion differs from practice submission. Avoid recording private student data; don't publish login credentials or test-account screenshots to GitHub. For iOS, repeat separately in TestFlight if a compatible Apple device is available.
+
+This report is static artefact analysis, not security certification, penetration testing, or proof of student adoption.
