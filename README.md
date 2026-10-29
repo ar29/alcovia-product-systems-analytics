@@ -2,6 +2,18 @@
 
 > **Synthetic data only.** Not affiliated with Alcovia's production engineering team. This is a local assessment prototype; no real payment, CRM or student systems are connected.
 
+## Start here: the original problem and the response
+
+This repository was created for Alcovia's **Product, Systems & Analytics Lead** take-home assessment (15 October 2026). It is not a production implementation.
+
+**[Read the original assignment context — what Alcovia asked and why this approach was chosen](docs/ORIGINAL_ASSIGNMENT_CONTEXT.md).** This is a sourced, condensed explanation with a link to the original employer-provided brief; private test credentials are deliberately omitted.
+
+**What Alcovia asked:** Prioritize four unordered problems—student app adoption; GTM/revenue/campaign tracking; a reliable product and systems delivery process; and student-progress measurement—while proposing a plan for a three-person team (candidate lead, one full-stack engineer, one process/systems designer) beginning 1 November 2026. The practical exercise had a 72-hour submission window.
+
+**Why I prioritized student learning outcomes:** The brief reported roughly 2.15 minutes of average app usage and proposed 30 minutes as a stable-state goal, but more minutes are not evidence of actual learning. My chosen hypothesis was to make a meaningful next academic action easier to resume, and to measure evidence-backed activity and return rather than time alone. This **remains a hypothesis to validate**, not a claimed improvement.
+
+**What is delivered here:** A synthetic interactive GTM/student dashboard, illustrative SQL metrics/schema, unconnected n8n templates, testable metric definitions and a phased delivery plan. [The executive assessment](docs/EXECUTIVE_WRITEUP.md) explains the reasoning; [the decision log](docs/DECISION_LOG.md) distinguishes provided evidence from proposals.
+
 ## Start
 
 No application dependencies. Python 3 or any static HTTP server:
